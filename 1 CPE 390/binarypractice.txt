@@ -1,0 +1,85 @@
+CPE 390 Worksheey: Base arithmetic, and boolean operation
+We will need to knw this table for test 2
+
+Decimal: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+Hex (16): 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+Octal (8): 0,1,2,3,4,5,6,7,10,11,12,13,14,15,16,17
+Binary: 0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111
+
+if you have 32 bits how many digits is that in hex? 8
+if you have 64 bits? 16
+
+1. Convert from binary to Decimal
+first make the table
+--------------------------------------------------
+128 64 32 16 8 4 2 1 
+1   0  0  1  1 0 0 1
+--------------------------------------------------
+if there is a one you count that column if there is a zero you dont:
+
+11010110: 128+64+0+16+0+4+2+0=
+10110101: 
+
+2.convert from decimal to binary
+subtract highest power of 2 from the number and compute the remainder, write 0 any time power of 2 does not fit 
+ex. 236= 128+64+32+(remainder of 12) 0+8+4+0+0 = 10001100
+convert 255 to binary:
+convert 126 to binary:
+convery 73 to binary:
+
+------------------------------------------------------------------------------------------------------------------------------------
+C++ base notation
+
+decimal | hex        | Octal | binary
+123     | 0xFF2EC912 | 0776  | 0b10110101011
+
+converting hex and octal to binary 
+each digit is 3 or 4 binary digits
+0FFE2C109A = 1111 1110 0010 1100 0001 0000 1001 1010 
+0776 = 111111110
+
+some mnemonics: A is 10 - 1010 B is 11 = 1011
+practice hex to binary:
+convert 0xDEADBEEF= 
+convert 0xF001EAC4=
+
+a multiple of 4 in hex will always end in digits: 048C
+a multiple of 8 in hex will always en din digits: 08
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Boolean operations
+                           C++      ASSEMBLER
+AND                      | &      | and x0, x1, x2 (x0= x1 AND x2)
+OR                       | |      | orr x19, x2, x7 (x19 = x2 OR x7)
+XOR                      | ^      | eor x20, x2, x5
+NOT                      | ~      | movn x0, x1 
+unsigned left shift      | a << 3 | lsl x0, 3
+unsigned right shift     | a >> 4 | lsr x0, 4
+signed left shift        | b << 7 | asl x0, 7
+signed right shift       | b >> 5 | asr x0, 5
+rotate right             |        | ror x0, 3
+
+*NOTE: &&, ||, ARE LOGICAL AND, OR (they are different)
+practice these:
+0xFEED9008 & 0x49A7C5D2 = 
+
+0xFEED9008 | 1111 1110 1110 1101 1001 0000 0000 1000
+0x49A7C5D2 | 0100 1001 1010 0111 1100 0101 1101 0010
+in binary    0100 1000 1010 0101 1000 0000 0000 0000
+in hex       4    8    A    5    8    0    0    0 
+
+so 0xFEED9008 & 0x49A7C5D2 = 
+
+
+0x12345678 | 0x7C43AE2C =
+
+
+0x12345678 ^ 0x7C43AE2C = 
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+exclusive or
+1001
+1101
+====XOR
+0100
