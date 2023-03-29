@@ -3,7 +3,7 @@
 * All class notes, HW, labs, and pushes from professor Kruger
 
 ## Some Relevant Links
-1. I can't find professor Krugers original repository
+1. I can't find professor Kruger's original repository
 2. [My LinkedIn](https://www.linkedin.com/in/angeltomasordonezretamar/)
 
 ## Stevens Institute of Technology, Computer Engineering, class of 2024
